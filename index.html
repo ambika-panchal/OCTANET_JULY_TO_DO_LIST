@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo-List</title>
+	<link rel="stylesheet" href="main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main class="app">
+		<section class="greeting">
+			<h2 class="title">
+				Hey What's up, <input type="text" id="name" placeholder=" please Enter Your name here ..." />
+			</h2>
+		</section>
+
+		<section class="create-todo">
+			<h3><b>CREATE DO TO LIST</b> </h3>
+			<form id="new-todo-form">
+				<h4>What's on your TODO Today ?</h4>
+				<input 
+					type="text" 
+					placeholder="e.g. Bulid Documentation "
+					name="content"
+					id="content" />
+
+				<h4>What Type You Want to do </h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="Front-end" /> 
+						<span class="bubble Front-end"></span>
+						<div>Front-end</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="Back-end" />
+						<span class="bubble Back-end"></span>
+						<div>Back-end</div>
+					</label>
+				</div>
+                
+				<h4>DeadLine</h4>
+				<div class="options">	
+				    <input type="date" name="deadline" class="deadline-input">
+                    <select name="priority" class="priority-todo">Priority
+                      <option value="High Priority">High Priority</option>
+                      <option value="Medium Priority">Medium Priority</option>
+                      <option value="Low Priority">Low Priority</option>
+                    </select>
+			    </div>
+
+				<input type="submit" value="Add Tasks " />
+			</form>
+		</section>
+
+		<section class="todo-list">
+			<h3>Your Task  List will be Displayed Here </h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+	</main>
+
+	<script src="main.js"></script>
+</body>
+</html>
